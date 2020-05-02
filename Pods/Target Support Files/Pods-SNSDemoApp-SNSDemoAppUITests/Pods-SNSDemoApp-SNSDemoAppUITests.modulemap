@@ -1,0 +1,6 @@
+framework module Pods_SNSDemoApp_SNSDemoAppUITests {
+  umbrella header "Pods-SNSDemoApp-SNSDemoAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
