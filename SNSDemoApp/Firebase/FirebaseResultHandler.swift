@@ -18,6 +18,5 @@ protocol FirebaseResultDelegate: class {
 extension FirebaseResultDelegate {
     func didFailed(message: String) {}
     func didSignUpSucceed(message: String) {}
-    func didSignInSucceed() {}
     func didSignInSucceed(user: User) {}
 }

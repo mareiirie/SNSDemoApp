@@ -40,14 +40,14 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4f-UN-PP9">
                                         <rect key="frame" x="0.0" y="0.0" width="214" height="30"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="新規登録"/>
                                         <connections>
                                             <action selector="didTapSignUpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rbR-75-2hP"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bMb-mg-xnJ">
                                         <rect key="frame" x="0.0" y="60" width="214" height="30"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="ログイン"/>
                                         <connections>
                                             <action selector="didTapLoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vVy-E2-Gst"/>
                                         </connections>
