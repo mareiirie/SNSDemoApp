@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="orV-Oe-fl2">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--New Post View Controller-->
+        <scene sceneID="Fab-H1-SBa">
+            <objects>
+                <viewController storyboardIdentifier="NewPostViewController" modalPresentationStyle="fullScreen" id="orV-Oe-fl2" customClass="NewPostViewController" customModule="SNSDemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CPF-hK-bPE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nGY-sq-ftk">
+                                <rect key="frame" x="0.0" y="44" width="414" height="68"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T0A-X5-CWA">
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="68"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="didTapCancelButton:" destination="orV-Oe-fl2" eventType="touchUpInside" id="ZV7-UN-61D"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IjF-Y6-Aj7">
+                                        <rect key="frame" x="207" y="0.0" width="207" height="68"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="didTapPostButton:" destination="orV-Oe-fl2" eventType="touchUpInside" id="Kzl-Lc-rKt"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="IjF-Y6-Aj7" firstAttribute="width" secondItem="nGY-sq-ftk" secondAttribute="width" multiplier="0.5" id="i9D-sn-4Pn"/>
+                                    <constraint firstItem="T0A-X5-CWA" firstAttribute="width" secondItem="nGY-sq-ftk" secondAttribute="width" multiplier="0.5" id="mAA-cG-yZ1"/>
+                                </constraints>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vAJ-14-zut">
+                                <rect key="frame" x="0.0" y="112" width="414" height="274"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nGY-sq-ftk" firstAttribute="leading" secondItem="jr7-Fq-qU1" secondAttribute="leading" id="05y-hS-CbU"/>
+                            <constraint firstItem="jr7-Fq-qU1" firstAttribute="trailing" secondItem="vAJ-14-zut" secondAttribute="trailing" id="NxW-Nb-rQQ"/>
+                            <constraint firstItem="jr7-Fq-qU1" firstAttribute="bottom" secondItem="vAJ-14-zut" secondAttribute="bottom" constant="476" id="VUO-D2-n3E"/>
+                            <constraint firstItem="nGY-sq-ftk" firstAttribute="top" secondItem="jr7-Fq-qU1" secondAttribute="top" id="btr-yn-LZZ"/>
+                            <constraint firstItem="vAJ-14-zut" firstAttribute="top" secondItem="nGY-sq-ftk" secondAttribute="bottom" id="eDJ-Sp-RnW"/>
+                            <constraint firstItem="jr7-Fq-qU1" firstAttribute="bottom" secondItem="nGY-sq-ftk" secondAttribute="bottom" constant="750" id="o2C-xN-CLV"/>
+                            <constraint firstItem="jr7-Fq-qU1" firstAttribute="trailing" secondItem="nGY-sq-ftk" secondAttribute="trailing" id="ryZ-L4-MNM"/>
+                            <constraint firstItem="vAJ-14-zut" firstAttribute="leading" secondItem="jr7-Fq-qU1" secondAttribute="leading" id="s1h-cp-qDK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jr7-Fq-qU1"/>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="T0A-X5-CWA" id="mh3-Fh-3KR"/>
+                        <outlet property="newPostTextField" destination="vAJ-14-zut" id="NJI-Zp-2aW"/>
+                        <outlet property="postButton" destination="IjF-Y6-Aj7" id="6SN-fR-Btt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pmq-kn-3Yc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2.8985507246376816" y="98.4375"/>
+        </scene>
+    </scenes>
+</document>

@@ -10,6 +10,9 @@
 		204DF8E3216E7A209C93A55F /* Pods_SNSDemoApp_SNSDemoAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D442BF52DDD46DDBBC4756F8 /* Pods_SNSDemoApp_SNSDemoAppUITests.framework */; };
 		61BE4F272E8D82F7797676E1 /* Pods_SNSDemoAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DC08B188C0A561245711E6 /* Pods_SNSDemoAppTests.framework */; };
 		8E8A553D290E7D85908DD6EE /* Pods_SNSDemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8BEA183808B5CECCCC7507D /* Pods_SNSDemoApp.framework */; };
+		A412BE77246316FC006137D4 /* DirectMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412BE76246316FC006137D4 /* DirectMessageViewController.swift */; };
+		A412BE7B24644EEC006137D4 /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412BE7A24644EEC006137D4 /* NewPostViewController.swift */; };
+		A412BE7D24644F0B006137D4 /* NewPostViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A412BE7C24644F0B006137D4 /* NewPostViewController.storyboard */; };
 		A4C7297A245BFE0300A2EB97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C72979245BFE0300A2EB97 /* AppDelegate.swift */; };
 		A4C7297C245BFE0300A2EB97 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C7297B245BFE0300A2EB97 /* SceneDelegate.swift */; };
 		A4C72983245BFE0400A2EB97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4C72982245BFE0400A2EB97 /* Assets.xcassets */; };
@@ -49,6 +52,9 @@
 		160674F663950ECFB65F4A85 /* Pods-SNSDemoAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNSDemoAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SNSDemoAppTests/Pods-SNSDemoAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		43099D45D3940D831C1E3AD6 /* Pods-SNSDemoApp-SNSDemoAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNSDemoApp-SNSDemoAppUITests.release.xcconfig"; path = "Target Support Files/Pods-SNSDemoApp-SNSDemoAppUITests/Pods-SNSDemoApp-SNSDemoAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		68C297D0B50F42367D999215 /* Pods-SNSDemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNSDemoApp.debug.xcconfig"; path = "Target Support Files/Pods-SNSDemoApp/Pods-SNSDemoApp.debug.xcconfig"; sourceTree = "<group>"; };
+		A412BE76246316FC006137D4 /* DirectMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectMessageViewController.swift; sourceTree = "<group>"; };
+		A412BE7A24644EEC006137D4 /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
+		A412BE7C24644F0B006137D4 /* NewPostViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewPostViewController.storyboard; sourceTree = "<group>"; };
 		A4C72976245BFE0300A2EB97 /* SNSDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SNSDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4C72979245BFE0300A2EB97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4C7297B245BFE0300A2EB97 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -230,7 +236,10 @@
 			isa = PBXGroup;
 			children = (
 				A4C729C2245D928F00A2EB97 /* HomeViewController.swift */,
+				A412BE7A24644EEC006137D4 /* NewPostViewController.swift */,
+				A412BE7C24644F0B006137D4 /* NewPostViewController.storyboard */,
 				A4C729C0245D928800A2EB97 /* HomeViewController.storyboard */,
+				A412BE76246316FC006137D4 /* DirectMessageViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -357,6 +366,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A412BE7D24644F0B006137D4 /* NewPostViewController.storyboard in Resources */,
 				A4C729C1245D928800A2EB97 /* HomeViewController.storyboard in Resources */,
 				A4C72986245BFE0400A2EB97 /* LaunchScreen.storyboard in Resources */,
 				A4C729AA245BFE7800A2EB97 /* GoogleService-Info.plist in Resources */,
@@ -489,11 +499,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A412BE7B24644EEC006137D4 /* NewPostViewController.swift in Sources */,
 				A4C729BF245D925700A2EB97 /* LoginViewController.swift in Sources */,
 				A4C729AE245C2B3300A2EB97 /* FirebaseAuthHandler.swift in Sources */,
 				A4C729C9245D931300A2EB97 /* UIStoryboard+Instance.swift in Sources */,
 				A4C7297A245BFE0300A2EB97 /* AppDelegate.swift in Sources */,
 				A4C7297C245BFE0300A2EB97 /* SceneDelegate.swift in Sources */,
+				A412BE77246316FC006137D4 /* DirectMessageViewController.swift in Sources */,
 				A4C729C7245D92D500A2EB97 /* GetClassName.swift in Sources */,
 				A4C729B2245C451600A2EB97 /* FirebaseResultHandler.swift in Sources */,
 				A4C729C3245D928F00A2EB97 /* HomeViewController.swift in Sources */,

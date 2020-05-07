@@ -15,7 +15,11 @@ class HomeViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
+
+    @IBAction func tappedNewPostButton(_ sender: Any) {
+        performSegue(withIdentifier: "toNewPost", sender: self)
+    }
+
     class func instance() -> HomeViewController {
         guard let viewController = UIStoryboard.viewController(
             storyboardName: HomeViewController.className,

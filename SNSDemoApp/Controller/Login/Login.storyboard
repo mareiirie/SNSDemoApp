@@ -71,11 +71,22 @@
                         <outlet property="mailAddressTextField" destination="v1T-DE-s94" id="dn9-lI-1GS"/>
                         <outlet property="passwordTextField" destination="Nr1-4o-nWO" id="kLh-ts-L3U"/>
                         <outlet property="userNameTextField" destination="bk0-pR-EbP" id="ceV-op-fQJ"/>
+                        <segue destination="Mhf-3F-jcI" kind="presentation" identifier="toHome" modalPresentationStyle="fullScreen" id="VNb-oe-qUf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="116.51785714285714"/>
+        </scene>
+        <!--HomeViewController-->
+        <scene sceneID="UbX-Wh-pW7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HomeViewController" id="Mhf-3F-jcI" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="WbO-aJ-5Uz"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="shk-Bf-w7A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1776" y="88"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Lu7-s5-EzF">

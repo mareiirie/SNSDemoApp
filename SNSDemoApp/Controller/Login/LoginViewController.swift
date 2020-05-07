@@ -51,9 +51,7 @@ extension LoginViewController: FirebaseResultDelegate {
     }
 
     func didSignInSucceed(user: User){
-        //User情報をuserdefaultに登録する
-        let homeViewController = HomeViewController.instance()
-        present(homeViewController, animated: true, completion: nil)
+        self.performSegue(withIdentifier: "toHome", sender: self)
     }
 }
 
