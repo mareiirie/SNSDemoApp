@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 
 class FirebaseAuthHandler: UIViewController {
-
+    
     weak var delegate: FirebaseResultDelegate?
 
     func signUp(email: String, password: String, name: String) {
@@ -24,7 +24,18 @@ class FirebaseAuthHandler: UIViewController {
                 guard let user = result?.user else {
                     fatalError("エラーハンドリングミス")
                 }
-                self.sendEmailVerification(to: user)
+                let req = user.createProfileChangeRequest()
+                req.displayName = name
+                req.commitChanges() { error in
+                    if let error = error {
+                        guard let errcd = AuthErrorCode(rawValue: (error as NSError).code) else {
+                            fatalError("エラーハンドリングミス")
+                        }
+                        self.switchErroeType(errorType: errcd)
+                    } else {
+                        self.sendEmailVerification(to: user)
+                    }
+                }
             }
         }
     }
@@ -40,7 +51,12 @@ class FirebaseAuthHandler: UIViewController {
                 guard let user = result?.user else {
                     fatalError("エラーハンドリングミス")
                 }
-                self.delegate?.didSignInSucceed(user: user)
+                if Auth.auth().currentUser!.isEmailVerified {
+                    UserDefaults.standard.set(user, forKey: .nowLoginUser)
+                    self.delegate?.didSignInSucceed(user: user)
+                } else {
+                    self.delegate?.didFailed(message: "Eメールの認証がされていません")
+                }
             }
         }
     }

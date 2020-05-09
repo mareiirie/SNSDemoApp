@@ -7,6 +7,7 @@ target 'SNSDemoApp' do
 
 pod 'Firebase/Analytics'
 pod 'Firebase/Auth'
+pod 'Firebase/Firestore'
 
   # Pods for SNSDemoApp
 
