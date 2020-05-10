@@ -11,12 +11,18 @@ import Firebase
 
 class NewPostViewController: UIViewController {
 
+    enum Const {
+        static let maxStringCount = 100
+    }
+
     @IBOutlet private weak var cancelButton: UIButton!
     @IBOutlet private weak var postButton: UIButton!
     @IBOutlet private weak var newPostTextField: UITextView!
+    @IBOutlet weak var counterLable: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        newPostTextField.delegate = self
         setUpView()
     }
 
@@ -47,5 +53,17 @@ class NewPostViewController: UIViewController {
                 self.dismiss(animated: true, completion: nil)
             }
         }
+    }
+}
+
+extension NewPostViewController: UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        guard let text = newPostTextField.text else { return }
+
+            if newPostTextField.markedTextRange == nil && newPostTextField.text.count > Const.maxStringCount {
+            let endIndex = text.index(text.startIndex, offsetBy: Const.maxStringCount)
+            newPostTextField.text = String(text[..<endIndex])
+        }
+        counterLable.text = String(newPostTextField.text.count) + "文字（最大100文字）"
     }
 }
