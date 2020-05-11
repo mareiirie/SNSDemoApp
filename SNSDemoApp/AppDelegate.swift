@@ -8,6 +8,24 @@
 
 import UIKit
 import Firebase
+import XCGLogger
+
+let log: XCGLogger? = {
+    #if PRODUCT
+    return nil
+
+    #else
+    let log = XCGLogger.default
+    log.setup(level: .debug,
+              showThreadName: true,
+              showLevel: true,
+              showFileNames: true,
+              showLineNumbers: true,
+              writeToFile: nil)
+    return log
+    #endif
+}()
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

@@ -22,6 +22,19 @@
 		A412BE9A2466C3D1006137D4 /* EmptyTimelineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A412BE932466C3D1006137D4 /* EmptyTimelineTableViewCell.xib */; };
 		A412BE9E2466C3D9006137D4 /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412BE9C2466C3D9006137D4 /* NewPostViewController.swift */; };
 		A412BE9F2466C3D9006137D4 /* NewPostViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A412BE9D2466C3D9006137D4 /* NewPostViewController.storyboard */; };
+		A412BEA224694720006137D4 /* GameListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412BEA124694720006137D4 /* GameListViewController.swift */; };
+		A412BEA724694F5F006137D4 /* HomeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412BEA424694F5F006137D4 /* HomeRequest.swift */; };
+		A412BEA824694F5F006137D4 /* HomeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412BEA524694F5F006137D4 /* HomeResponse.swift */; };
+		A412BEA924694F5F006137D4 /* HomeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412BEA624694F5F006137D4 /* HomeAPI.swift */; };
+		A412BEB024694F6B006137D4 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412BEAB24694F6B006137D4 /* APIClient.swift */; };
+		A412BEB124694F6B006137D4 /* GetAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412BEAC24694F6B006137D4 /* GetAPIService.swift */; };
+		A412BEB224694F6B006137D4 /* WebAPIReturnCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412BEAD24694F6B006137D4 /* WebAPIReturnCode.swift */; };
+		A412BEB324694F6B006137D4 /* ReturnCodeResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412BEAE24694F6B006137D4 /* ReturnCodeResult.swift */; };
+		A412BEB424694F6B006137D4 /* WebAPIRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412BEAF24694F6B006137D4 /* WebAPIRequestProtocol.swift */; };
+		A412BEB624699040006137D4 /* Json+Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412BEB524699040006137D4 /* Json+Dictionary.swift */; };
+		A412BEB824699071006137D4 /* NSError+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412BEB724699071006137D4 /* NSError+Helper.swift */; };
+		A412BEBA246990AB006137D4 /* UIImage+CacheImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412BEB9246990AB006137D4 /* UIImage+CacheImage.swift */; };
+		A412BEBC246990D7006137D4 /* UIViewController+ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412BEBB246990D7006137D4 /* UIViewController+ActivityIndicator.swift */; };
 		A4C7297A245BFE0300A2EB97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C72979245BFE0300A2EB97 /* AppDelegate.swift */; };
 		A4C7297C245BFE0300A2EB97 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C7297B245BFE0300A2EB97 /* SceneDelegate.swift */; };
 		A4C72983245BFE0400A2EB97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4C72982245BFE0400A2EB97 /* Assets.xcassets */; };
@@ -71,6 +84,19 @@
 		A412BE932466C3D1006137D4 /* EmptyTimelineTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyTimelineTableViewCell.xib; sourceTree = "<group>"; };
 		A412BE9C2466C3D9006137D4 /* NewPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
 		A412BE9D2466C3D9006137D4 /* NewPostViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewPostViewController.storyboard; sourceTree = "<group>"; };
+		A412BEA124694720006137D4 /* GameListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListViewController.swift; sourceTree = "<group>"; };
+		A412BEA424694F5F006137D4 /* HomeRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRequest.swift; sourceTree = "<group>"; };
+		A412BEA524694F5F006137D4 /* HomeResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeResponse.swift; sourceTree = "<group>"; };
+		A412BEA624694F5F006137D4 /* HomeAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeAPI.swift; sourceTree = "<group>"; };
+		A412BEAB24694F6B006137D4 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		A412BEAC24694F6B006137D4 /* GetAPIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetAPIService.swift; sourceTree = "<group>"; };
+		A412BEAD24694F6B006137D4 /* WebAPIReturnCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebAPIReturnCode.swift; sourceTree = "<group>"; };
+		A412BEAE24694F6B006137D4 /* ReturnCodeResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReturnCodeResult.swift; sourceTree = "<group>"; };
+		A412BEAF24694F6B006137D4 /* WebAPIRequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebAPIRequestProtocol.swift; sourceTree = "<group>"; };
+		A412BEB524699040006137D4 /* Json+Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Json+Dictionary.swift"; sourceTree = "<group>"; };
+		A412BEB724699071006137D4 /* NSError+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSError+Helper.swift"; sourceTree = "<group>"; };
+		A412BEB9246990AB006137D4 /* UIImage+CacheImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+CacheImage.swift"; sourceTree = "<group>"; };
+		A412BEBB246990D7006137D4 /* UIViewController+ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ActivityIndicator.swift"; sourceTree = "<group>"; };
 		A4C72976245BFE0300A2EB97 /* SNSDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SNSDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4C72979245BFE0300A2EB97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4C7297B245BFE0300A2EB97 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -161,6 +187,37 @@
 			path = SNSDemoApp/Controller/Home/Newpost;
 			sourceTree = SOURCE_ROOT;
 		};
+		A412BEA0246946E7006137D4 /* GameList */ = {
+			isa = PBXGroup;
+			children = (
+				A412BEA124694720006137D4 /* GameListViewController.swift */,
+			);
+			path = GameList;
+			sourceTree = "<group>";
+		};
+		A412BEA324694F5F006137D4 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				A412BEA424694F5F006137D4 /* HomeRequest.swift */,
+				A412BEA524694F5F006137D4 /* HomeResponse.swift */,
+				A412BEA624694F5F006137D4 /* HomeAPI.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		A412BEAA24694F6B006137D4 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				A412BEAB24694F6B006137D4 /* APIClient.swift */,
+				A412BEAC24694F6B006137D4 /* GetAPIService.swift */,
+				A412BEAD24694F6B006137D4 /* WebAPIReturnCode.swift */,
+				A412BEAE24694F6B006137D4 /* ReturnCodeResult.swift */,
+				A412BEAF24694F6B006137D4 /* WebAPIRequestProtocol.swift */,
+			);
+			name = API;
+			path = SNSDemoApp/API;
+			sourceTree = SOURCE_ROOT;
+		};
 		A4C7296D245BFE0300A2EB97 = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +248,8 @@
 				A4C729B9245D913100A2EB97 /* Controller */,
 				A4C729B8245D912A00A2EB97 /* Extension */,
 				A4C729B7245D911F00A2EB97 /* Utility */,
+				A412BEA324694F5F006137D4 /* Module */,
+				A412BEAA24694F6B006137D4 /* API */,
 				A4C72979245BFE0300A2EB97 /* AppDelegate.swift */,
 				A4C7297B245BFE0300A2EB97 /* SceneDelegate.swift */,
 				A4C72982245BFE0400A2EB97 /* Assets.xcassets */,
@@ -233,6 +292,10 @@
 			children = (
 				A4C729AB245C11C800A2EB97 /* UIViewController+Alert.swift */,
 				A4C729C8245D931300A2EB97 /* UIStoryboard+Instance.swift */,
+				A412BEB524699040006137D4 /* Json+Dictionary.swift */,
+				A412BEB724699071006137D4 /* NSError+Helper.swift */,
+				A412BEB9246990AB006137D4 /* UIImage+CacheImage.swift */,
+				A412BEBB246990D7006137D4 /* UIViewController+ActivityIndicator.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -275,6 +338,7 @@
 		A4C729BD245D91B600A2EB97 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A412BEA0246946E7006137D4 /* GameList */,
 				A412BE9B2466C3D9006137D4 /* Newpost */,
 				A412BE8C2466C3D1006137D4 /* Timeline */,
 				A412BE76246316FC006137D4 /* DirectMessageViewController.swift */,
@@ -545,14 +609,27 @@
 				A4C7297A245BFE0300A2EB97 /* AppDelegate.swift in Sources */,
 				A412BE942466C3D1006137D4 /* TimelineTableViewCell.swift in Sources */,
 				A412BE9E2466C3D9006137D4 /* NewPostViewController.swift in Sources */,
+				A412BEBA246990AB006137D4 /* UIImage+CacheImage.swift in Sources */,
+				A412BEA724694F5F006137D4 /* HomeRequest.swift in Sources */,
+				A412BEA924694F5F006137D4 /* HomeAPI.swift in Sources */,
+				A412BEB024694F6B006137D4 /* APIClient.swift in Sources */,
 				A412BE962466C3D1006137D4 /* HomeViewController.swift in Sources */,
+				A412BEA824694F5F006137D4 /* HomeResponse.swift in Sources */,
+				A412BEB324694F6B006137D4 /* ReturnCodeResult.swift in Sources */,
 				A4C7297C245BFE0300A2EB97 /* SceneDelegate.swift in Sources */,
+				A412BEB224694F6B006137D4 /* WebAPIReturnCode.swift in Sources */,
 				A412BE832466A0F9006137D4 /* FirebaseModel.swift in Sources */,
+				A412BEB124694F6B006137D4 /* GetAPIService.swift in Sources */,
 				A412BE77246316FC006137D4 /* DirectMessageViewController.swift in Sources */,
+				A412BEB424694F6B006137D4 /* WebAPIRequestProtocol.swift in Sources */,
 				A4C729C7245D92D500A2EB97 /* GetClassName.swift in Sources */,
 				A4C729B2245C451600A2EB97 /* FirebaseResultHandler.swift in Sources */,
 				A412BE972466C3D1006137D4 /* TimeLineProvider.swift in Sources */,
+				A412BEBC246990D7006137D4 /* UIViewController+ActivityIndicator.swift in Sources */,
+				A412BEB824699071006137D4 /* NSError+Helper.swift in Sources */,
+				A412BEB624699040006137D4 /* Json+Dictionary.swift in Sources */,
 				A412BE7F246573AA006137D4 /* UserDefaultHelper.swift in Sources */,
+				A412BEA224694720006137D4 /* GameListViewController.swift in Sources */,
 				A4C729AC245C11C800A2EB97 /* UIViewController+Alert.swift in Sources */,
 				A412BE952466C3D1006137D4 /* EmptyTimelineTableViewCell.swift in Sources */,
 			);

@@ -86,7 +86,7 @@
                                     <constraint firstItem="IPy-nk-nPb" firstAttribute="height" secondItem="ZYT-ZF-TfR" secondAttribute="height" multiplier="0.6" id="yH4-PE-y7T"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yqU-Wn-k3k">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yqU-Wn-k3k">
                                 <rect key="frame" x="192" y="0.0" width="128" height="218"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qwY-f5-4cc">
@@ -96,7 +96,7 @@
                                                 <rect key="frame" x="20" y="20" width="90" height="120"/>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="iHJ-OG-azw" secondAttribute="bottom" constant="12.5" id="4Ga-MH-b8b"/>
                                             <constraint firstItem="iHJ-OG-azw" firstAttribute="leading" secondItem="qwY-f5-4cc" secondAttribute="leading" constant="20" id="4ck-im-XL8"/>
@@ -104,30 +104,22 @@
                                             <constraint firstItem="iHJ-OG-azw" firstAttribute="top" secondItem="qwY-f5-4cc" secondAttribute="top" constant="20" id="l9Z-uC-Pfo"/>
                                         </constraints>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0YB-99-bkT">
-                                        <rect key="frame" x="0.0" y="158" width="128" height="60"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DJH-Qm-o39">
+                                        <rect key="frame" x="0.0" y="152.5" width="128" height="65.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FaQ-hN-RvU" userLabel="いいね">
-                                                <rect key="frame" x="0.0" y="0.0" width="128" height="30"/>
-                                                <state key="normal" title="Button"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMK-h9-bRw" userLabel="クリップ">
-                                                <rect key="frame" x="0.0" y="30" width="128" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFl-GD-S4R">
+                                                <rect key="frame" x="0.0" y="18" width="128" height="30"/>
+                                                <color key="backgroundColor" red="0.047665532009999997" green="0.096507766960000005" blue="0.1508722156" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Button"/>
                                             </button>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="FaQ-hN-RvU" firstAttribute="height" secondItem="0YB-99-bkT" secondAttribute="height" multiplier="0.5" id="Efj-GA-Mn3"/>
-                                            <constraint firstItem="FaQ-hN-RvU" firstAttribute="width" secondItem="0YB-99-bkT" secondAttribute="width" id="iYj-gt-rZO"/>
-                                            <constraint firstItem="mMK-h9-bRw" firstAttribute="height" secondItem="0YB-99-bkT" secondAttribute="height" multiplier="0.5" id="nfR-WK-SXl"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="qwY-f5-4cc" firstAttribute="height" secondItem="yqU-Wn-k3k" secondAttribute="height" multiplier="0.7" id="FXv-5n-Zyn"/>
-                                    <constraint firstItem="qwY-f5-4cc" firstAttribute="width" secondItem="yqU-Wn-k3k" secondAttribute="width" id="SnX-kx-J80"/>
-                                    <constraint firstItem="0YB-99-bkT" firstAttribute="height" secondItem="yqU-Wn-k3k" secondAttribute="height" multiplier="0.3" id="YKv-yh-N4P"/>
-                                    <constraint firstItem="0YB-99-bkT" firstAttribute="width" secondItem="yqU-Wn-k3k" secondAttribute="width" id="wdr-fe-0Mm"/>
+                                    <constraint firstItem="qwY-f5-4cc" firstAttribute="width" secondItem="yqU-Wn-k3k" secondAttribute="width" id="4hi-BY-uVX"/>
+                                    <constraint firstItem="qwY-f5-4cc" firstAttribute="height" secondItem="yqU-Wn-k3k" secondAttribute="height" multiplier="0.7" id="ALv-oS-c9h"/>
+                                    <constraint firstItem="DJH-Qm-o39" firstAttribute="width" secondItem="yqU-Wn-k3k" secondAttribute="width" id="K4M-WF-nQa"/>
+                                    <constraint firstItem="DJH-Qm-o39" firstAttribute="height" secondItem="yqU-Wn-k3k" secondAttribute="height" multiplier="0.3" id="obX-7I-CTe"/>
                                 </constraints>
                             </stackView>
                         </subviews>

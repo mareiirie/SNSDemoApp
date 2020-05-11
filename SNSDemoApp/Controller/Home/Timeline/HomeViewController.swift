@@ -17,9 +17,12 @@ class HomeViewController: UIViewController {
     var timelineDatasource = TimeLineProvider()
     var lastDocument: QueryDocumentSnapshot?
     var loadStatus = true
+    var getAPIService = GetAPIService()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        getAPIService.delegate = self
+        getAPIService.getHomeInfo()
         setView()
         database = Firestore.firestore()
         setCells()
@@ -96,5 +99,27 @@ class HomeViewController: UIViewController {
 }
 
 extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 250
+    }
+}
+
+extension HomeViewController: GetAPIServiceDelegate {
+    func error(status: WebAPIReturnCode) {
+        self.showWarning(message: status.rawValue)
+    }
+
+    func unauthorized() {
+        self.showWarning(message: "不正な権限")
+    }
+
+    func finishReloadHomeInfo(data: HomeResponse){
+        print("完了")
+//        restList = data.rest
+//        datasource.set(restInfo: restList)
+//        homeCollectionView.reloadData()
+//        stopActivityIndicator()
+    }
+
 
 }

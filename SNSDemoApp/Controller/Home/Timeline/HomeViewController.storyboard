@@ -53,16 +53,47 @@
             <point key="canvasLocation" x="5105.7971014492759" y="59.598214285714285"/>
         </scene>
         <!--Item-->
-        <scene sceneID="1rT-y1-knw">
+        <scene sceneID="V9f-e2-iIB">
             <objects>
-                <viewController id="I6C-1B-3lM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="boD-gT-CyC">
+                <viewController id="tKN-ID-6hP" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GqB-Pj-ZJl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="4Vw-WG-iCF"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="5FT-Z7-k5t"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eRp-HV-zzu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3987" y="1047"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="1rT-y1-knw">
+            <objects>
+                <viewController id="I6C-1B-3lM" customClass="GameListViewController" customModule="SNSDemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="boD-gT-CyC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iZN-3Y-plx">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="iZN-3Y-plx" firstAttribute="top" secondItem="QKI-RW-qcj" secondAttribute="top" id="6SW-HM-IoD"/>
+                            <constraint firstItem="QKI-RW-qcj" firstAttribute="bottom" secondItem="iZN-3Y-plx" secondAttribute="bottom" id="Lax-HN-Zxr"/>
+                            <constraint firstItem="iZN-3Y-plx" firstAttribute="leading" secondItem="QKI-RW-qcj" secondAttribute="leading" id="XXt-9X-3vt"/>
+                            <constraint firstItem="QKI-RW-qcj" firstAttribute="trailing" secondItem="iZN-3Y-plx" secondAttribute="trailing" id="ukE-1n-MyH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="QKI-RW-qcj"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="U7v-LN-pqo"/>
+                    <connections>
+                        <outlet property="gameListTableView" destination="iZN-3Y-plx" id="dbW-5x-pEg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dov-Us-LBh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -89,6 +120,7 @@
                     <connections>
                         <segue destination="W7K-MQ-mZA" kind="relationship" relationship="viewControllers" id="WHW-NF-KXN"/>
                         <segue destination="I6C-1B-3lM" kind="relationship" relationship="viewControllers" id="9vY-Uc-exg"/>
+                        <segue destination="tKN-ID-6hP" kind="relationship" relationship="viewControllers" id="Ef5-zT-Agp"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5LT-1R-sVy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

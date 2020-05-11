@@ -8,6 +8,8 @@ target 'SNSDemoApp' do
 pod 'Firebase/Analytics'
 pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
+pod 'Alamofire', '~> 5.1'
+pod 'XCGLogger', '~> 7.0.1'
 
   # Pods for SNSDemoApp
 
