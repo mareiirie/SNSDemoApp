@@ -12,6 +12,8 @@ import Firebase
 final class TimeLineProvider: NSObject {
 
     fileprivate var timelineData = [Post]()
+    var cellRoatedFlug = true
+    var emptyCellRoatedFlg = true
 
     func set(timelineData: [Post]) {
         self.timelineData = timelineData
@@ -34,8 +36,9 @@ extension TimeLineProvider: UITableViewDataSource {
             let cell = tableView
                 .dequeueReusableCell(withIdentifier: TimelineTableViewCell.className,
                                      for: indexPath) as? TimelineTableViewCell
-            cell?.timelineData = timelineData[timelineData.count - indexPath.row - 1]
+          cell?.timelineData = timelineData[timelineData.count - indexPath.row - 1]
             return cell!
         }
     }
 }
+

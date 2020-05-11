@@ -15,9 +15,12 @@ class HomeViewController: UIViewController {
     var database: Firestore!
     var postArray = [Post]()
     var timelineDatasource = TimeLineProvider()
+    var lastDocument: QueryDocumentSnapshot?
+    var loadStatus = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setView()
         database = Firestore.firestore()
         setCells()
         timelineTableView.delegate = self
@@ -26,17 +29,44 @@ class HomeViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        database.collection("posts").order(by: "createdAt", descending: false).getDocuments { (snapshot, error) in
+        database.collection("posts").order(by: "createdAt", descending: false).limit(toLast: 15).getDocuments { (snapshot, error) in
             if error == nil, let snapshot = snapshot {
-                self.postArray = []
                 for document in snapshot.documents {
                     let data = document.data()
                     let post = Post(data: data)
                     self.postArray.append(post)
                 }
+                self.lastDocument = snapshot.documents.first
                 self.timelineDatasource.set(timelineData: self.postArray)
                 self.timelineTableView.reloadData()
             }
+        }
+    }
+
+    func setView(){
+    }
+
+    private func addOlderTimelineData(){
+        if loadStatus {
+            loadStatus = false
+        guard let nextDocument = lastDocument else {
+            return
+        }
+        database.collection("posts").order(by: "createdAt", descending: true).limit(to: 15).start(afterDocument: nextDocument).getDocuments { (snapshot, error) in
+            if error == nil, let snapshot = snapshot {
+                for document in snapshot.documents {
+                    let data = document.data()
+                    let post = Post(data: data)
+                    self.postArray.insert(post, at: 0)
+                }
+                self.lastDocument = snapshot.documents.last
+                self.timelineDatasource.set(timelineData: self.postArray)
+                self.timelineTableView.reloadData()
+                self.loadStatus = true
+            }
+        }
+        }else{
+            return
         }
     }
 
@@ -56,6 +86,12 @@ class HomeViewController: UIViewController {
                 fatalError("HomeViewController not Found.")
         }
         return viewController
+    }
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+
+        if timelineTableView.contentOffset.y + timelineTableView.frame.size.height > timelineTableView.contentSize.height && timelineTableView.isDragging {
+            addOlderTimelineData()
+        }
     }
 }
 
